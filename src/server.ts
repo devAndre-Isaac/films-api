@@ -4,9 +4,11 @@ import express, { NextFunction, Response, Request } from "express";
 import "./database";
 import { routes } from "./routes";
 import AppError from "./errors/AppError";
+import { pagination } from "typeorm-pagination";
 
 const app = express();
 app.use(routes);
+app.use(pagination);
 
 app.use(
   (error: Error, request: Request, response: Response, next: NextFunction) => {
