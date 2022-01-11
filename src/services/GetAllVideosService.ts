@@ -1,4 +1,3 @@
-import { getRepository } from "typeorm";
 import { Video } from "../entities/Video";
 import { getCustomRepository } from "typeorm";
 import VideosRepository from "../repositories/VideosRepository";
